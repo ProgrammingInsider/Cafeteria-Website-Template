@@ -1,0 +1,329 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    padding: auto;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0px 0px 0px 2px lightgrey;
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header .logo{
+    margin-left: 2em;
+    flex-basis: 0.5;
+   width: 100%;
+   letter-spacing: .3em;
+}
+
+
+header nav{
+    display: flex;
+    flex-basis: 0.5;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+}
+
+
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80%;
+}
+
+header nav ul li{
+    margin-right: 1em;
+    letter-spacing: .2em;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+header nav ul li:hover{
+ background-color: lightgrey;
+}
+
+section.banner{
+    width: 100%;
+    max-height: 100vh;
+    position: relative;
+}
+
+section.banner img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+section.banner .banner_title{
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: rgba(0,0,0,.6);
+    font-size: 2.3rem;
+    letter-spacing: .1em;
+}
+
+section.about{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 5em 0;
+    width: 90%;
+    max-width: 1100px;
+}
+
+
+section.about .left{
+    width: 49%;
+}
+
+section.about .left img{
+    width: 100%;
+    max-height: 100%;
+    opacity: .7;
+}
+
+section.about .right{
+    text-align: center;
+    width: 45%;
+    padding-top: 50px;
+    margin-left: 2em;
+}
+
+section.about .right .title{
+  letter-spacing: .1em;
+  text-align: center;
+  height: 70px;
+  font-size: 1.8rem;
+} 
+
+section.about .right .sub_title{
+
+  letter-spacing: .4em;
+  text-align: center;
+  height: 40px;
+}
+
+section.about .right .para{
+ font-size: .8rem;
+ line-height: 1.6em;
+
+}
+
+
+
+
+section.about .right .para2{
+  color: rgba(0,0,0,.6);
+  
+}
+
+section.menu .right{
+    margin-right: 2em;
+}
+
+section.menu .menus{
+    line-height: 2em;
+    margin-bottom: 50px;
+}
+
+section.menu .menus .name{
+    letter-spacing: .3em;
+    font-size: 1.2rem;
+}
+
+section.menu .menus .desc{
+ color: rgba(0,0,0,.6);
+}
+
+section.contact{
+    padding: 5em 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section.contact .title{
+    height: 3em;
+    letter-spacing: .3em;
+    font-size: 1.5rem;
+}
+
+section.contact h5{
+    margin: 1em 0;
+    font-weight: bold;
+    color: lightblue;
+    font-size: 1.1em;
+}
+
+section.contact p{
+    font-size: .8rem;
+}
+
+section.contact form{
+    margin-top: 1em;
+}
+
+section.contact form input:not(#submit){
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    padding: 20px 6px;
+    margin-bottom: 5px;
+}
+
+section.contact form #submit{
+    outline: none;
+    border: none;
+    background-color: lightgray;
+    padding: 1em;
+    margin-top: 10px;
+}
+
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p{
+    font-size: .8rem;
+    line-height: 7em;
+}
+
+footer p a{
+    color: black;
+    text-decoration: underline;
+}
+
+footer p a:hover{
+    color: red;
+}
+
+@media only screen and (max-width: 630px) {
+
+    section.banner{
+        max-width: 630px;
+        height: 50vh;
+        position: relative;
+    }
+
+    header nav{
+        display: none;
+        
+    }
+
+    section.about{
+        width: 90%;
+    }
+
+    section.about .left{
+        display: none;
+    }
+
+    section.about:not(.menu) .right{
+        width: 80%;
+        text-align: center;
+    }
+
+    section.about .right .para2{
+        display: block;
+      }
+
+      section.menu .left{
+          width: 100%;
+          display: block;
+      }
+
+      footer{
+          max-width: 630px;
+      }
+    
+    
+}
+
+
+@media only screen and (max-width: 788px) {
+    header .logo{
+       letter-spacing: .2em;
+    }
+
+    header nav ul li{
+        margin-right: .5em;
+        letter-spacing: .1em;
+    }
+    
+    section.about .right .para2{
+       display: none;
+        
+      }
+
+      section.menu{
+          flex-direction: column;
+      }
+
+      section.menu .right{
+        width: 90%;
+    }
+
+    section.menu .menus{
+        margin-bottom: 30px;
+    }
+
+    section.menu .menus .name{
+        letter-spacing: .1em;
+        font-size: .8rem;
+    }
+
+    section.menu .left{
+       width: 100%;
+    }
+      
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
